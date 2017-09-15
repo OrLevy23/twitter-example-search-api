@@ -118,7 +118,13 @@ router.get("/", (req, res) => {
 				res.status(500).send(error);
 			});
 	} else {
-		res.status(400).send("not a valid request");
+		res.status(400).send(
+			{
+				type: "error",
+				code: 400,
+				message: "You must provide valid query to search",
+			}
+		);
 	}
 });
 
