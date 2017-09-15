@@ -1,0 +1,11 @@
+.message {
+   text-align: center;
+}
+
+.loadingDiv {
+    text-align: center;
+    margin-top: 16px;    
+}
+.loader {
+    display: inline-block;
+}
