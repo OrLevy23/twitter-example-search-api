@@ -25,7 +25,7 @@ const mapDispatchToProps = (dispatch) => {
 				return;
 			}
 			const id = decStrNum(lastId);
-			console.log(id);
+			// console.log(id);yar
 			dispatch(scrollToLoad(id));
 		},
 	};

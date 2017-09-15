@@ -8,7 +8,9 @@ describe("loading express", () => {
 	afterEach(() => {
 		// app.close();
 	});
-	it("responds to /status with valid params", (done) => {
+	it("responds to /status with valid params", function(done) { 
+		/* If i use arrow function here then this will not pass into the function */
+		this.timeout(6000); // The first get will take more time due to authentication				
 		request(app)
 			.get("/status")
 			.query({ search: "tapingo" })

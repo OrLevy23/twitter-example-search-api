@@ -19,7 +19,8 @@ const options = {
 };
 let key;
 let numOfTries = 0;
-const maxNumOfTries = 2;
+const maxNumOfTries = 2; /* I've encountered with a lot of timeouts in the api so i added
+							 multiple attempts in case one fails, this is configurable here  */
 
 const authenticate = () => {
 	return new Promise((resolve, reject) => {
@@ -117,7 +118,7 @@ router.get("/", (req, res) => {
 				res.status(500).send(error);
 			});
 	} else {
-		res.status(400).send("not valid request");
+		res.status(400).send("not a valid request");
 	}
 });
 
